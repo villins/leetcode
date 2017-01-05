@@ -5,7 +5,7 @@ def sum_numbers(root)
   queue = []
   queue.push([root, root.val])
   while(queue.any?) do
-    node, val = queue.pop
+    node, val = queue.shift
     if node.left || node.right
       if node.left
         queue.push([node.left, val * 10 + node.left.val])
